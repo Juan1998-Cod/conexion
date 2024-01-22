@@ -14,7 +14,7 @@ $sql = "INSERT INTO empleados(id,nombre, apellido, email)
 VALUES (5050,'Juan', 'David','Juandavidruiz@hotmail.com')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo "nueva fila creada ";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
