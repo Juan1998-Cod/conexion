@@ -18,5 +18,21 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
+ // 
+$sql = "SELECT * FROM empleados";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+      echo "id: " . $row["id"] . " - nombre: " . $row["nombre"] . " - apellido:" . $row["apellido"] ." - email: " . $row["email"]. "<br>";
+  }
+} 
+   else {
+  echo "0 resultados";
+}
+
 $conn->close();
+
+
+
 ?>
